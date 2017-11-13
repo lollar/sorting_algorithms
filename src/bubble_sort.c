@@ -5,28 +5,27 @@
 int main() {
   srand(time(NULL));
 
-  int unsortedArray[100];
-  int arraySize = sizeof(unsortedArray) / sizeof(unsortedArray[0]);
-
-  printf("Size: %d", arraySize);
+  int testArray[100];
+  int arraySize = sizeof(testArray) / sizeof(testArray[0]);
   
+  // fill array with random numbers
   for(int i = 0; i < arraySize; i++) {
-    unsortedArray[i] = rand();
-    printf("Element #%d: %d\n", i, unsortedArray[i]);
+    testArray[i] = rand();
   }
 
+  // sort the array
   for(int i = 0; i < arraySize; i++) {
     for(int j = 0; j < arraySize - 1; j++) {
-      if(unsortedArray[j] > unsortedArray[j+1]) {
-        int temp = unsortedArray[j];
-        unsortedArray[j] = unsortedArray[j+1];
-        unsortedArray[j+1] = temp;
+      if(testArray[j] > testArray[j+1]) {
+        int temp = testArray[j];
+        testArray[j] = testArray[j+1];
+        testArray[j+1] = temp;
       }
     }
   }
 
   for(int i = 0; i < arraySize; i++) {
-    printf("Element #%d: %d\n", i, unsortedArray[i]);
+    printf("Element #%d: %d\n", i, testArray[i]);
   }
 
   getchar();
