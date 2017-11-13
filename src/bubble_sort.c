@@ -15,8 +15,6 @@ int main() {
     printf("Element #%d: %d\n", i, unsortedArray[i]);
   }
 
-  int sortedArray[arraySize];
-
   for(int i = 0; i < arraySize; i++) {
     for(int j = 0; j < arraySize - 1; j++) {
       if(unsortedArray[j] > unsortedArray[j+1]) {
